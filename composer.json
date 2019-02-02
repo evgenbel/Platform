@@ -28,7 +28,9 @@
         "idavoll/translation-module": "~3.0",
         "idavoll/tag-module": "~3.0",
         "idavoll/flatly-theme": "~3.0",
-        "idavoll/adminlte-theme": "~3.0"
+        "idavoll/adminlte-theme": "~3.0",
+        "evgenbel/multisite": "dev-master",
+        "evgenbel/DigitalBiz-theme": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -40,7 +42,7 @@
         "barryvdh/laravel-debugbar": "~3.0",
         "orchestra/testbench": "^3.5",
         "league/flysystem-aws-s3-v3": "^1.0",
-        "league/commonmark": "^0.15.4",
+        "league/commonmark": "dev-master",
         "predis/predis": "^1.1",
         "roave/security-advisories": "dev-master"
     },
@@ -80,5 +82,11 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@192.168.1.37:/opt/git/multisite.git"
+        }
+    ]
 }
