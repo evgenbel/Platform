@@ -87,6 +87,10 @@
         {
             "type": "vcs",
             "url":  "git@192.168.1.37:/opt/git/multisite.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@192.168.1.37:/opt/git/DigitalBiz-theme.git"
         }
     ]
 }
