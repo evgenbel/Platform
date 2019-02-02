@@ -80,6 +80,7 @@
         translations: {!! $staticTranslations !!},
         locales: {!! json_encode(LaravelLocalization::getSupportedLocales()) !!},
         currentLocale: '{{ locale() }}',
+        defaultLocale: '{{ LaravelLocalization::getDefaultLocale() }}',
         editor: '{{ $activeEditor }}',
         adminPrefix: '{{ config('asgard.core.core.admin-prefix') }}',
         hideDefaultLocaleInURL: '{{ config('laravellocalization.hideDefaultLocaleInURL') }}',

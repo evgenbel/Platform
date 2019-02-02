@@ -34,7 +34,7 @@ const currentLocale = window.AsgardCMS.currentLocale;
 const adminPrefix = window.AsgardCMS.adminPrefix;
 
 function makeBaseUrl() {
-    if (window.AsgardCMS.hideDefaultLocaleInURL == 1) {
+    if (window.AsgardCMS.hideDefaultLocaleInURL == 1  && window.AsgardCMS.currentLocale==window.AsgardCMS.defaultLocale) {
         return adminPrefix;
     }
     return `${currentLocale}/${adminPrefix}`;
