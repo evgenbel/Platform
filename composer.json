@@ -30,6 +30,7 @@
         "idavoll/flatly-theme": "~3.0",
         "idavoll/adminlte-theme": "~3.0",
         "evgenbel/multisite": "dev-master",
+        "evgenbel/sport": "dev-master",
         "evgenbel/DigitalBiz-theme": "dev-master"
     },
     "require-dev": {
@@ -91,6 +92,10 @@
         {
             "type": "vcs",
             "url":  "git@192.168.1.37:/opt/git/DigitalBiz-theme.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@192.168.1.37:/opt/git/sport.git"
         }
     ]
 }
