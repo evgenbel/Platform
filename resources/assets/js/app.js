@@ -9,6 +9,7 @@ import VueEvents from 'vue-events';
 import locale from 'element-ui/lib/locale/lang/en';
 import VueSimplemde from 'vue-simplemde';
 import PageRoutes from '../../../Modules/Page/Assets/js/PageRoutes';
+import OrgRoutes from '../../../Modules/Sport/Assets/js/OrgRoutes';
 import MediaRoutes from '../../../Modules/Media/Assets/js/MediaRoutes';
 import UserRoutes from '../../../Modules/User/Assets/js/UserRoutes';
 
@@ -45,6 +46,7 @@ const router = new VueRouter({
     base: makeBaseUrl(),
     routes: [
         ...PageRoutes,
+        ...OrgRoutes,
         ...MediaRoutes,
         ...UserRoutes,
     ],
