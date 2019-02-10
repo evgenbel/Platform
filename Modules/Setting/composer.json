@@ -1,5 +1,5 @@
 {
-  "name": "idavoll/setting-module",
+  "name": "evgenbel/setting",
   "type": "asgard-module",
   "description": "Setting module for AsgardCMS. Handles all the site settings.",
   "keywords": [
@@ -9,15 +9,15 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Nicolas Widart",
-      "email": "info@asgardcms.com",
+      "name": "Evgeniy Belov",
+      "email": "evgeniyblv@gmail.com",
       "role": "Developer"
     }
   ],
   "support": {
     "email": "support@asgardcms.com",
-    "issues": "https://github.com/AsgardCms/Platform/issues",
-    "source": "https://github.com/AsgardCms/Setting"
+    "issues": "https://github.com/Evgenbel/Platform/issues",
+    "source": "https://github.com/Evgenbel/Setting"
   },
   "require": {
     "php": ">=7.0.0",

@@ -1,5 +1,5 @@
 {
-    "name": "asgardcms/platform",
+    "name": "evgenbel/platform",
     "description": "The AsgardCms application.",
     "keywords": [
         "cms",
@@ -20,7 +20,7 @@
         "idavoll/core-module": "~3.0",
         "idavoll/dashboard-module": "~3.0",
         "idavoll/user-module": "~3.0",
-        "idavoll/setting-module": "~3.0",
+        "evgenbel/setting": "~3.0",
         "idavoll/media-module": "~3.0",
         "idavoll/page-module": "~3.0",
         "idavoll/menu-module": "~3.0",
@@ -96,6 +96,14 @@
         {
             "type": "vcs",
             "url":  "git@192.168.1.37:/opt/git/sport.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "https://github.com/evgenbel/Platform.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "https://github.com/evgenbel/Setting.git"
         }
     ]
 }
