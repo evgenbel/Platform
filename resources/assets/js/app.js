@@ -8,10 +8,10 @@ import ElementUI from 'element-ui';
 import VueEvents from 'vue-events';
 import locale from 'element-ui/lib/locale/lang/en';
 import VueSimplemde from 'vue-simplemde';
-import PageRoutes from '../../../Modules/Page/Assets/js/PageRoutes';
-import OrgRoutes from '../../../Modules/Sport/Assets/js/OrgRoutes';
-import MediaRoutes from '../../../Modules/Media/Assets/js/MediaRoutes';
-import UserRoutes from '../../../Modules/User/Assets/js/UserRoutes';
+import PageRoutes from '../../../Modules/Page/Assets/js/PageRoutes' /* webpackChunkName: "PageRoutes" */;
+import OrgRoutes from '../../../Modules/Sport/Assets/js/OrgRoutes' /* webpackChunkName: "OrgRoutes" */;
+import MediaRoutes from '../../../Modules/Media/Assets/js/MediaRoutes' /* webpackChunkName: "MediaRoutes" */;
+import UserRoutes from '../../../Modules/User/Assets/js/UserRoutes' /* webpackChunkName: "UserRoutes" */;
 
 Vue.use(ElementUI, { locale });
 Vue.use(VueI18n);
