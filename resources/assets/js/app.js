@@ -1,18 +1,20 @@
 require('./bootstrap');
 
 import 'babel-polyfill';
+
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 import VueRouter from 'vue-router';
 import ElementUI from 'element-ui';
 import VueEvents from 'vue-events';
-import locale from 'element-ui/lib/locale/lang/en';
+import locale from 'element-ui/lib/locale/lang/ru-RU';
 import VueSimplemde from 'vue-simplemde';
+
+
 import PageRoutes from '../../../Modules/Page/Assets/js/PageRoutes' /* webpackChunkName: "PageRoutes" */;
 import SportRoutes from '../../../Modules/Sport/Assets/js/SportRoutes' /* webpackChunkName: "SportRoutes" */;
 import MediaRoutes from '../../../Modules/Media/Assets/js/MediaRoutes' /* webpackChunkName: "MediaRoutes" */;
 import UserRoutes from '../../../Modules/User/Assets/js/UserRoutes' /* webpackChunkName: "UserRoutes" */;
-
 
 
 Vue.use(ElementUI, { locale });
@@ -29,7 +31,7 @@ Vue.component('ckeditor', require('../../../Modules/Core/Assets/js/components/Ck
 Vue.component('DeleteButton', require('../../../Modules/Core/Assets/js/components/DeleteComponent.vue'));
 Vue.component('EditButton', require('../../../Modules/Core/Assets/js/components/EditButtonComponent.vue'));
 Vue.component('TagsInput', require('../../../Modules/Tag/Assets/js/components/TagInput.vue'));
-Vue.component('OrgInput', require('../../../Modules/Sport/Assets/js/components/OrgInput.vue'));
+Vue.component('OrgInput', require('../../../Modules/Sport/Assets/js/components/org/OrgInput.vue'));
 Vue.component('SingleMedia', require('../../../Modules/Media/Assets/js/components/SingleMedia.vue'));
 Vue.component('MediaManager', require('../../../Modules/Media/Assets/js/components/MediaManager.vue'));
 
