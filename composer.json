@@ -96,14 +96,6 @@
         {
             "type": "vcs",
             "url":  "git@192.168.1.37:/opt/git/sport.git"
-        },
-        {
-            "type": "vcs",
-            "url":  "https://github.com/evgenbel/Platform.git"
-        },
-        {
-            "type": "vcs",
-            "url":  "https://github.com/evgenbel/Setting.git"
         }
     ]
 }
