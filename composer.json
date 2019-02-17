@@ -19,7 +19,8 @@
         "cartalyst/sentinel": "~2.0",
         "evgenbel/multisite": "dev-master",
         "evgenbel/sport": "dev-master",
-        "evgenbel/DigitalBiz-theme": "dev-master"
+        "evgenbel/DigitalBiz-theme": "dev-master",
+        "asgardcms/block": "^3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
