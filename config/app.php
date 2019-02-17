@@ -11,12 +11,12 @@ return [
     | framework needs to place the application's name in a notification or
     | any other location as required by the application or its packages.
     */
-    'name' => 'My Application',
+    'name' => 'iSportsman',
 
     /*
    |--------------------------------------------------------------------------
    | Application cache
-   |--------------------------------------------------------------------------
+   |------------------------------------------------LaravelModulesServiceProvider--------------------------
    | Set this to true to use the cache decorators, this will greatly improve
    | the application speed and performance
    */
@@ -94,7 +94,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ru',
 
     /*
     |--------------------------------------------------------------------------
