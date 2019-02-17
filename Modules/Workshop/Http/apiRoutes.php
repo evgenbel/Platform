@@ -14,4 +14,9 @@ $router->group(['prefix' => 'workshop', 'middleware' => 'api.token'], function (
         'uses' => 'ThemeController@publishAssets',
         'middleware' => 'token-can:workshop.themes.publish',
     ]);
+    $router->get('themes', [
+        'as' => 'api.workshop.themes.index',
+        'uses' => 'ThemeController@index',
+        'middleware' => 'token-can:workshop.themes.index',
+    ]);
 });
