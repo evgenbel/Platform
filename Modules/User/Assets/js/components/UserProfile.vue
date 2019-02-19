@@ -48,8 +48,9 @@
                                              v-text="form.errors.first('email')"></div>
                                     </el-form-item>
                                 </el-tab-pane>
+
                                 <el-tab-pane :label="trans('org.title.orgs')">
-                                <org-tab :user="user.id"></org-tab>
+                                    <org-tab :user="user.id"></org-tab>
                                 </el-tab-pane>
 
                                 <el-tab-pane :label="trans('users.tabs.new password')" v-if="! user.is_new">
