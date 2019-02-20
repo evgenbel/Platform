@@ -119,6 +119,10 @@
                                         </div>
                                     </div>
                                 </el-tab-pane>
+
+                                <el-tab-pane  :label="trans('org.title.orgs')"  v-if="! user.is_new">
+                                    <org-tab :user="user.id"></org-tab>
+                                </el-tab-pane>
                             </el-tabs>
                         </div>
                         <div class="box-footer">

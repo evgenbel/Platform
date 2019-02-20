@@ -51,7 +51,12 @@ return [
         'resource updated' => ':name успешно обновлён.',
         'resource deleted' => ':name успешно удалён.',
     ],
-    'back' => 'Back',
+    'save' => 'Сохранить',
+    'confirm' => 'Подтвердить',
+    'move' => 'Переместить',
+    'widget' => 'Виджет',
+    'widgets' => 'Виджеты',
+    'back' => 'Назад',
     'back to index' => 'Вернуться к :name',
     'permission denied' => 'Отказано в доступе. (Требуется разрешение: ":permission")',
 ];
