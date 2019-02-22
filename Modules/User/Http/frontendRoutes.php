@@ -11,6 +11,7 @@ $router->group(['prefix' => 'auth'], function (Router $router) {
     if (config('asgard.user.config.allow_user_registration', true)) {
         $router->get('register', ['middleware' => 'auth.guest', 'as' => 'register', 'uses' => 'AuthController@getRegister']);
         $router->post('register', ['as' => 'register.post', 'uses' => 'AuthController@postRegister']);
+        $router->post('registerajax', ['as' => 'register.postajax', 'uses' => 'AuthController@postAjaxRegister']);
     }
     # Account Activation
     $router->get('activate/{userId}/{activationCode}', 'AuthController@getActivate');

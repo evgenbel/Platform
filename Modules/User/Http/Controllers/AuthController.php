@@ -3,6 +3,7 @@
 namespace Modules\User\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Support\Facades\Request;
 use Modules\Core\Http\Controllers\BasePublicController;
 use Modules\User\Exceptions\InvalidOrExpiredResetCode;
 use Modules\User\Exceptions\UserNotFoundException;
@@ -57,6 +58,11 @@ class AuthController extends BasePublicController
 
         return redirect()->route('register')
             ->withSuccess(trans('user::messages.account created check email for activation'));
+    }
+
+    public function postAjaxRegister(RegisterRequest $request)
+    {
+        app(UserRegistration::class)->register($request->all());
     }
 
     public function getLogout()
