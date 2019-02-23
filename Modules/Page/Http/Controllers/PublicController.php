@@ -7,6 +7,7 @@ use Modules\Core\Http\Controllers\BasePublicController;
 use Modules\Menu\Repositories\MenuItemRepository;
 use Modules\Page\Entities\Page;
 use Modules\Page\Repositories\PageRepository;
+use Modules\User\Contracts\Authentication;
 
 class PublicController extends BasePublicController
 {

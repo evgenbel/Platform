@@ -13,6 +13,8 @@ use Modules\User\Http\Requests\ResetCompleteRequest;
 use Modules\User\Http\Requests\ResetRequest;
 use Modules\User\Services\UserRegistration;
 use Modules\User\Services\UserResetter;
+use Modules\User\Transformers\FullUserTransformer;
+use Modules\User\Transformers\UserTransformer;
 
 class AuthController extends BasePublicController
 {
@@ -47,6 +49,30 @@ class AuthController extends BasePublicController
                 ->withSuccess(trans('user::messages.successfully logged in'));
     }
 
+    public function postAjaxLogin(LoginRequest $request)
+    {
+        $credentials = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+
+        $remember = (bool) $request->get('remember_me', false);
+
+        $error = $this->auth->login($credentials, $remember);
+
+        if ($error) {
+            return response()->json(array(
+                'code'      =>  401,
+                'message'   =>  $error
+            ), 401);
+        }
+        return response()->json(array(
+            'code'      =>  200,
+            'message'   =>  'Auth success',
+            'redirect'  =>  route('account.profile')
+        ), 200);
+    }
+
     public function getRegister()
     {
         return view('user::public.register');
@@ -62,7 +88,23 @@ class AuthController extends BasePublicController
 
     public function postAjaxRegister(RegisterRequest $request)
     {
-        app(UserRegistration::class)->register($request->all());
+        $user = app(UserRegistration::class)->register($request->all());
+        $credentials = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+        $error = $this->auth->login($credentials, false);
+        if ($error) {
+            return response()->json(array(
+                'code'      =>  401,
+                'message'   =>  $error
+            ), 401);
+        }
+        return response()->json(array(
+            'code'      =>  200,
+            'message'   =>  'Auth success',
+            'redirect'  =>  route('account.profile')
+        ), 200);
     }
 
     public function getLogout()

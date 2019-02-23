@@ -7,6 +7,7 @@ $router->group(['prefix' => 'auth'], function (Router $router) {
     # Login
     $router->get('login', ['middleware' => 'auth.guest', 'as' => 'login', 'uses' => 'AuthController@getLogin']);
     $router->post('login', ['as' => 'login.post', 'uses' => 'AuthController@postLogin']);
+    $router->post('loginajax', ['as' => 'login.postajax', 'uses' => 'AuthController@postAjaxLogin']);
     # Register
     if (config('asgard.user.config.allow_user_registration', true)) {
         $router->get('register', ['middleware' => 'auth.guest', 'as' => 'register', 'uses' => 'AuthController@getRegister']);
@@ -22,4 +23,8 @@ $router->group(['prefix' => 'auth'], function (Router $router) {
     $router->post('reset/{id}/{code}', ['as' => 'reset.complete.post', 'uses' => 'AuthController@postResetComplete']);
     # Logout
     $router->get('logout', ['as' => 'logout', 'uses' => 'AuthController@getLogout']);
+});
+
+$router->group(['prefix' => 'account'], function (Router $router) {
+    $router->get('profile', ['middleware' => 'logged.in', 'as' => 'account.profile', 'uses' => 'AccountController@profile']);
 });

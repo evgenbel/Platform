@@ -113,3 +113,8 @@ $router->group(['prefix' => '/user', 'middleware' => ['api.token', 'auth.admin']
         'middleware' => 'token-can:user.roles.index',
     ]);
 });
+
+$router->group(['prefix' => '/auth'], function (Router $router) {
+    $router->post('login', ['as' => 'api.login.post', 'uses' => 'AuthController@postLogin']);
+    $router->post('register', ['as' => 'api.register.post', 'uses' => 'AuthController@postRegister']);
+});
