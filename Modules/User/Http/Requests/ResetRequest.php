@@ -30,6 +30,9 @@ class ResetRequest extends FormRequest
 
     public function messages()
     {
-        return [];
+        return [
+            'email.required'    =>  trans('user::messages.email required'),
+            'email.email'    =>  trans('user::messages.email valid'),
+        ];
     }
 }

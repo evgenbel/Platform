@@ -21,4 +21,10 @@ return [
     'role not found' => 'Роль не найдена.',
     'role updated' => 'Роль успешно обновлена.',
     'role deleted' => 'Роль успешно удалена.',
+    'email required' => 'Введите email',
+    'password required' => 'Введите пароль',
+    'email valid' => 'Введите корректный email',
+    'email unique' => 'Пользователь с таким email уже зарегистрирован.',
+    'password min' => 'Пароль должен быть не менее :min символов.',
+    'password confirmed' => 'Пароли не совпадают.',
 ];

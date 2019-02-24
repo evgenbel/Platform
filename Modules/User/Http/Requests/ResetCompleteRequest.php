@@ -31,6 +31,11 @@ class ResetCompleteRequest extends FormRequest
 
     public function messages()
     {
-        return [];
+        return [
+            'password.required'    =>  trans('user::messages.password required'),
+            'password.min'    =>  trans('user::messages.password min'),
+            'password.confirmed'    =>  trans('user::messages.password confirmed'),
+            'password_confirmation.required'    =>  trans('user::messages.password confirmed'),
+        ];
     }
 }

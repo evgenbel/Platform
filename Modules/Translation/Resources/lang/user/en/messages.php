@@ -26,4 +26,10 @@ return [
     'role deleted' => 'Role successfully deleted.',
     /* Profile management */
     'profile updated' => 'Profile successfully updated.',
+    'email required' => 'The email is required',
+    'password required' => 'The password is required',
+    'password min' => 'The password must be at least :min characters.',
+    'password confirmed' => 'The password confirmation does not match.',
+    'email valid' => 'The email must be a valid email address.',
+    'email unique' => 'The email has already been taken.',
 ];
