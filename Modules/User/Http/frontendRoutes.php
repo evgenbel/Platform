@@ -19,6 +19,7 @@ $router->group(['prefix' => 'auth'], function (Router $router) {
     # Reset password
     $router->get('reset', ['as' => 'reset', 'uses' => 'AuthController@getReset']);
     $router->post('reset', ['as' => 'reset.post', 'uses' => 'AuthController@postReset']);
+    $router->post('resetajax', ['as' => 'reset.postajax', 'uses' => 'AuthController@postAjaxReset']);
     $router->get('reset/{id}/{code}', ['as' => 'reset.complete', 'uses' => 'AuthController@getResetComplete']);
     $router->post('reset/{id}/{code}', ['as' => 'reset.complete.post', 'uses' => 'AuthController@postResetComplete']);
     # Logout

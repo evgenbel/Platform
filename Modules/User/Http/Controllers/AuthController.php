@@ -143,6 +143,23 @@ class AuthController extends BasePublicController
             ->withSuccess(trans('user::messages.check email to reset password'));
     }
 
+    public function postAjaxReset(ResetRequest $request)
+    {
+        try {
+            app(UserResetter::class)->startReset($request->all());
+        } catch (UserNotFoundException $e) {
+            return response()->json(array(
+                'code'      =>  401,
+                'message'   =>  trans('user::messages.no user found')
+            ), 401);
+        }
+
+        return response()->json(array(
+            'code'      =>  200,
+            'message'   =>  trans('user::messages.check email to reset password')
+        ), 200);
+    }
+
     public function getResetComplete()
     {
         return view('user::public.reset.complete');
