@@ -26,6 +26,6 @@ class AccountController extends BasePublicController
     }
 
     function profile(){
-        return 'profile';
+        return view('user::public.profile');
     }
 }
