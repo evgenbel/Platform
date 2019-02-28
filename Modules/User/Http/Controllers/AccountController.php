@@ -28,4 +28,12 @@ class AccountController extends BasePublicController
     function profile(){
         return view('user::public.profile');
     }
+
+    function update(){
+
+    }
+
+    function authUpdate(){
+
+    }
 }

@@ -10,27 +10,35 @@
 
 @section('content')
     <div class="col-sm-8 blog-main">
-        <form>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        <div>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">{{ trans('user::profile.title') }}</a>
+                </li>
+                <li role="presentation">
+                    <a href="#auth" aria-controls="auth" role="tab" data-toggle="tab">{{ trans('user::profile.auth') }}</a>
+                </li>
+                <li role="presentation">
+                    <a href="#orgs" aria-controls="orgs" role="tab" data-toggle="tab">{{ trans('user::profile.orgs') }}</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="profile">
+                    @include('user::public.partials.profile')
+                </div>
+                <div role="tabpanel" class="tab-pane" id="auth">
+                    @include('user::public.partials.auth')
+                </div>
+                <div role="tabpanel" class="tab-pane" id="orgs">
+                    @include('user::public.partials.orgs')
+                </div>
             </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputFile">File input</label>
-                <input type="file" id="exampleInputFile">
-                <p class="help-block">Example block-level help text here.</p>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox"> Check me out
-                </label>
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
+
+        </div>
     </div><!-- /.blog-main -->
 @stop
 
