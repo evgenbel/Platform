@@ -61,6 +61,8 @@ return [
         'permissions',
         'first_name',
         'last_name',
+        'gender',
+        'dob'
     ],
     /*
     |--------------------------------------------------------------------------
@@ -69,6 +71,9 @@ return [
     | Set the fields that will be cast to Carbon dates
     */
     'dates' => [
+        'dob',
+        'created_at',
+        'updated_at'
     ],
     /*
     |--------------------------------------------------------------------------

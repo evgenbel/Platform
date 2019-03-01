@@ -27,6 +27,8 @@ return [
     'form' => [
         'first-name' => 'Имя',
         'last-name' => 'Фамилия',
+        'date-bird' => 'Дата рождения',
+        'gender' => 'Пол',
         'email' => 'Email',
         'status' => 'Статус',
         'password' => 'Пароль',

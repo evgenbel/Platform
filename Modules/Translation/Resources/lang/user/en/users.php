@@ -28,6 +28,8 @@ return [
         'first-name' => 'First name',
         'last-name' => 'Last name',
         'email' => 'Email',
+        'date-bird' => 'Date of bird',
+        'gender' => 'Gender',
         'status' => 'Status',
         'password' => 'Password',
         'password-confirmation' => 'Password confirmation',

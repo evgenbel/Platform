@@ -2,6 +2,7 @@
 
 namespace Modules\User\Entities\Sentinel;
 
+use Carbon\Carbon;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Cartalyst\Sentinel\Users\EloquentUser;
 use Illuminate\Auth\Authenticatable;
@@ -15,14 +16,6 @@ use Modules\User\Presenters\UserPresenter;
 class User extends EloquentUser implements UserInterface, AuthenticatableContract
 {
     use PresentableTrait, Authenticatable;
-
-    protected $fillable = [
-        'email',
-        'password',
-        'permissions',
-        'first_name',
-        'last_name',
-    ];
 
     /**
      * {@inheritDoc}
@@ -46,6 +39,11 @@ class User extends EloquentUser implements UserInterface, AuthenticatableContrac
         }
 
         parent::__construct($attributes);
+    }
+
+    public function setDobAttribute($value)
+    {
+        $this->attributes['dob'] = Carbon::createFromFormat('d.m.Y', $value);
     }
 
     /**

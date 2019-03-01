@@ -2,6 +2,7 @@
 
 return [
     'login' => 'Войти',
+    'logout' => 'Выйти',
     'profile' => 'Профиль',
     'email' => 'Email',
     'remember me' => 'Запомнить меня',

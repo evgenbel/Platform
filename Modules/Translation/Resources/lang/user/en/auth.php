@@ -2,6 +2,7 @@
 
 return [
     'login' => 'Sign in',
+    'logout' => 'Logout',
     'email' => 'Email',
     'remember me' => 'Remember me',
     'forgot password' => 'I forgot my password',

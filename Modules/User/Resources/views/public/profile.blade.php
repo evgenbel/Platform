@@ -44,7 +44,7 @@
 
 @section('profile_menu')
     <a class="blog-nav-item active" href="">{{ trans('user::profile.title') }}</a>
-    <a class="blog-nav-item" href="">{{ trans('user::profile.orgs') }}</a>
+    <a class="blog-nav-item" href="{{ route('logout') }}">{{ trans('user::auth.logout') }}</a>
 @stop
 
 @section('right_menu')
