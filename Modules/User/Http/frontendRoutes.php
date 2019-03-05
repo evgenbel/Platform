@@ -27,6 +27,7 @@ $router->group(['prefix' => 'auth'], function (Router $router) {
 });
 
 $router->group(['prefix' => 'account'], function (Router $router) {
+    $router->get('index', ['middleware' => 'logged.in', 'as' => 'account.index', 'uses' => 'AccountController@index']);
     $router->get('profile', ['middleware' => 'logged.in', 'as' => 'account.profile', 'uses' => 'AccountController@profile']);
     $router->put('profile', ['middleware' => 'logged.in', 'as' => 'account.update', 'uses' => 'AccountController@update']);
     $router->put('profileauth', ['middleware' => 'logged.in', 'as' => 'account.authupdate', 'uses' => 'AccountController@authUpdate']);

@@ -4,5 +4,3 @@
     <li> <a href="{{ $org->site }}">{{ $org->name }}</a> <a href="{{ route('account.org.remove') }}" title="remove"><i class="remove-hover glyphicon glyphicon-trash"></i></a></li>
 @endforeach
 </ul>
-Отправить запрос на вступление в спортивную организацию
-<input />
