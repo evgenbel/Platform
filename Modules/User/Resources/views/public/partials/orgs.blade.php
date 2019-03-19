@@ -27,3 +27,5 @@
     </div>
 
 {!! Form::close() !!}
+
+<a href="{{ route('sport.org.register') }}" class="btn btn-danger">Зарегистрировать новую организацию</a>
