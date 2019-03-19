@@ -1,7 +1,7 @@
 <h3>Я состою в спортивных организациях</h3>
-<ul>
+<ul class="my-org-list">
 @foreach ($profile->orgs as $org)
-    <li>
+    <li class="org_{{ $org->id }}">
         <a href="{{ $org->site }}">{{ $org->name }}</a>
         <a href="{{ route('sport.user.unsubscribe', $org->id) }}" class="ld-ext-left"
            title="{{ trans('sport::org.actions.unsubscribe') }}" data-remove="{{ $org->id }}"><i class="remove-hover glyphicon glyphicon-trash"></i></a>
