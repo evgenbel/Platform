@@ -32,6 +32,12 @@ class AccountController extends BasePublicController
         $this->user = $user;
     }
 
+    function index(){
+        return view('user::public.index',[
+            'profile'   =>  $this->auth->user()
+        ]);
+    }
+
     function profile(){
         return view('user::public.profile',[
             'profile'   =>  $this->auth->user()

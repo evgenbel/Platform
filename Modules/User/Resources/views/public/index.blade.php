@@ -5,46 +5,20 @@
 @stop
 
 @section('h1')
-    {{ trans('user::profile.title') }}
+    {{  $profile->first_name }}  {{ $profile->last_name}}
 @stop
 
 @section('content')
     <div class="col-sm-8 blog-main">
         <div>
-
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active">
-                    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">{{ trans('user::profile.title') }}</a>
-                </li>
-                <li role="presentation">
-                    <a href="#auth" aria-controls="auth" role="tab" data-toggle="tab">{{ trans('user::profile.auth') }}</a>
-                </li>
-                <li role="presentation">
-                    <a href="#orgs" aria-controls="orgs" role="tab" data-toggle="tab">{{ trans('user::profile.orgs') }}</a>
-                </li>
-            </ul>
-
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="profile">
-                    @include('user::public.partials.profile')
-                </div>
-                <div role="tabpanel" class="tab-pane" id="auth">
-                    @include('user::public.partials.auth')
-                </div>
-                <div role="tabpanel" class="tab-pane" id="orgs">
-                    @include('user::public.partials.orgs')
-                </div>
-            </div>
-
+            Моя страница
         </div>
     </div><!-- /.blog-main -->
 @stop
 
 @section('profile_menu')
-    <a class="blog-nav-item" href="{{ route('account.index') }}">{{ trans('user::profile.main') }}</a>
-    <a class="blog-nav-item active" href="{{ route('account.profile') }}">{{ trans('user::profile.title') }}</a>
+    <a class="blog-nav-item active" href="{{ route('account.index') }}">{{ trans('user::profile.main') }}</a>
+    <a class="blog-nav-item " href="{{ route('account.profile') }}">{{ trans('user::profile.title') }}</a>
     <a class="blog-nav-item" href="{{ route('logout') }}">{{ trans('user::auth.logout') }}</a>
 @stop
 
